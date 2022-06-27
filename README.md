@@ -1,4 +1,4 @@
-# github.com/mpetrun5/diplomski
+# github.com/mpetrun5/diplomski-rad
 
 Blockchain novčanik za generaciju ECDSA potpisa pomoću kriptografije praga prema radu Gennara i Goldfedera.
 
@@ -18,7 +18,7 @@ koji čeka na poruku inicijacije TSS procesa te čvor koji započinje TSS proces
 Pasivni čvor se pokreće pomoću komande:
 
 ```bash
-./github.com/mpetrun5/diplomski listen --config <put-do-datoteke>
+./diplomski-rad listen --config <put-do-datoteke>
 ```
 
 ### Generacija ključeva
@@ -27,13 +27,13 @@ Nakon što su pasivni čvorovi spremni u mreži, pokretanje procesa generacije k
 izvršava se pomoću komande:
 
 ```bash
-./github.com/mpetrun5/diplomski generate-key --config <put-do-datoteke>
+./diplomski-rad generate-key --config <put-do-datoteke>
 ```
 
 ### Osvježavanje ključeva
 
 ```bash
-./github.com/mpetrun5/diplomski refresh-key --config <put-do-datoteke>
+./diplomski-rad refresh-key --config <put-do-datoteke>
 ```
 
 ### Slanje transakcije
@@ -42,5 +42,5 @@ Slanje transkacije započinje TSS generaciju potpisa te nakon uspješne generaci
 šalje transakciju na čvor Ethereum mreže.
 
 ```bash
-./github.com/mpetrun5/diplomski send-transaction --to <Ethereum adresa> --network <RPC URL Ethereum mreže> --data <arbitratni podatci transakcije> --config <put-do-datoteke>
+./diplomski-rad send-transaction --to <Ethereum adresa> --network <RPC URL Ethereum mreže> --data <arbitratni podatci transakcije> --config <put-do-datoteke>
 ```

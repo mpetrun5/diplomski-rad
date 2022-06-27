@@ -3,7 +3,7 @@ package common
 import (
 	"fmt"
 
-	p2p "github.com/mpetrun5/diplomski/p2p"
+	p2p "github.com/mpetrun5/diplomski-rad/p2p"
 
 	"github.com/binance-chain/tss-lib/tss"
 	"github.com/libp2p/go-libp2p-core/peer"

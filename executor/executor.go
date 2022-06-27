@@ -3,7 +3,7 @@ package executor
 import (
 	"math/big"
 
-	"github.com/mpetrun5/diplomski/tss/signing"
+	"github.com/mpetrun5/diplomski-rad/tss/signing"
 
 	tssSigning "github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/ethereum/go-ethereum/common"

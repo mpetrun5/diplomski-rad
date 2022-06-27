@@ -1,4 +1,4 @@
-module github.com/mpetrun5/diplomski
+module github.com/mpetrun5/diplomski-rad
 
 go 1.17
 

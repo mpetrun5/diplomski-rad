@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"time"
 
-	p2p "github.com/mpetrun5/diplomski/p2p"
-	storage "github.com/mpetrun5/diplomski/storage"
-	"github.com/mpetrun5/diplomski/tss/common"
-	"github.com/mpetrun5/diplomski/util"
+	p2p "github.com/mpetrun5/diplomski-rad/p2p"
+	storage "github.com/mpetrun5/diplomski-rad/storage"
+	"github.com/mpetrun5/diplomski-rad/tss/common"
+	"github.com/mpetrun5/diplomski-rad/util"
 
 	"github.com/binance-chain/tss-lib/ecdsa/keygen"
 	"github.com/binance-chain/tss-lib/ecdsa/resharing"

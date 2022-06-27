@@ -3,12 +3,12 @@ package cli
 import (
 	"math/big"
 
-	"github.com/mpetrun5/diplomski/config"
-	"github.com/mpetrun5/diplomski/executor"
-	"github.com/mpetrun5/diplomski/p2p"
-	"github.com/mpetrun5/diplomski/storage"
-	"github.com/mpetrun5/diplomski/transactor"
-	"github.com/mpetrun5/diplomski/tss/signing"
+	"github.com/mpetrun5/diplomski-rad/config"
+	"github.com/mpetrun5/diplomski-rad/executor"
+	"github.com/mpetrun5/diplomski-rad/p2p"
+	"github.com/mpetrun5/diplomski-rad/storage"
+	"github.com/mpetrun5/diplomski-rad/transactor"
+	"github.com/mpetrun5/diplomski-rad/tss/signing"
 
 	tssSigning "github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/ethereum/go-ethereum/common"

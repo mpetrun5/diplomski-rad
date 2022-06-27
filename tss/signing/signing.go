@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"time"
 
-	p2p "github.com/mpetrun5/diplomski/p2p"
-	"github.com/mpetrun5/diplomski/storage"
-	"github.com/mpetrun5/diplomski/tss/common"
+	p2p "github.com/mpetrun5/diplomski-rad/p2p"
+	"github.com/mpetrun5/diplomski-rad/storage"
+	"github.com/mpetrun5/diplomski-rad/tss/common"
 
 	"github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/binance-chain/tss-lib/tss"
