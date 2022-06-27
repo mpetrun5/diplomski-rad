@@ -35,3 +35,12 @@ izvršava se pomoću komande:
 ```bash
 ./diplomski refresh-key --config <put-do-datoteke>
 ```
+
+### Slanje transakcije
+
+Slanje transkacije započinje TSS generaciju potpisa te nakon uspješne generacije,
+šalje transakciju na čvor Ethereum mreže.
+
+```bash
+./diplomski send-transaction --to <Ethereum adresa> --network <RPC URL Ethereum mreže> --data <arbitratni podatci transakcije> --config <put-do-datoteke>
+```
