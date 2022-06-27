@@ -19,6 +19,8 @@ import (
 type SaveDataStorer interface {
 	GetSaveData() (storage.Keyshare, error)
 	SetSaveData(saveData storage.Keyshare) error
+	LockKeyshare()
+	UnlockKeyshare()
 }
 
 type Resharing struct {
@@ -46,8 +48,9 @@ func NewResharing(host host.Host, comm p2p.Communication, storer SaveDataStorer,
 // Start starts a resharing TSS process. Old parameters and read from keyshare and
 // new resharing parameters and read from config.
 func (rs *Resharing) Start() error {
-	allParties := common.GetParties(rs.Host.Peerstore().Peers())
+	rs.storer.LockKeyshare()
 
+	allParties := common.GetParties(rs.Host.Peerstore().Peers())
 	saveData, err := rs.storer.GetSaveData()
 	var key keygen.LocalPartySaveData
 	var oldParties tss.SortedPartyIDs
@@ -163,6 +166,7 @@ func (rs *Resharing) processEndMessage(endChn chan keygen.LocalPartySaveData) {
 				}
 
 				rs.Communication.UnSubscribe(p2p.TssReshareMsg, rs.SessionID)
+				rs.storer.UnlockKeyshare()
 			}
 		}
 	}

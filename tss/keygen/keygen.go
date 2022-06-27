@@ -17,6 +17,8 @@ import (
 
 type SaveDataStorer interface {
 	SetSaveData(saveData storage.Keyshare) error
+	LockKeyshare()
+	UnlockKeyshare()
 }
 
 type Keygen struct {
@@ -43,6 +45,8 @@ func NewKeygen(host host.Host, comm p2p.Communication, storer SaveDataStorer, th
 
 // Start starts a key generation TSS process.
 func (k *Keygen) Start() error {
+	k.storer.LockKeyshare()
+
 	parties := common.GetParties(k.Host.Peerstore().Peers())
 	k.PopulatePartyStore(parties)
 	ctx := tss.NewPeerContext(parties)
@@ -139,6 +143,7 @@ func (k *Keygen) processEndMessage(endChn chan keygen.LocalPartySaveData) {
 					fmt.Println(err)
 				}
 
+				k.storer.UnlockKeyshare()
 				k.Communication.UnSubscribe(p2p.TssReadyMsg, k.SessionID)
 
 				fmt.Println("================================")
