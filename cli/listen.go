@@ -10,6 +10,7 @@ import (
 	"github.com/mpetrun5/diplomski-rad/tss/signing"
 
 	tssSigning "github.com/binance-chain/tss-lib/ecdsa/signing"
+	peer "github.com/libp2p/go-libp2p-core/peer"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 )
@@ -47,6 +48,7 @@ func listen() {
 		case wMsg := <-msgChan:
 			{
 				initiateMsg, _ := common.UnmarshalInitiateMessage(wMsg.Payload)
+
 				switch initiateMsg.Process {
 				case "signing":
 					{
@@ -68,6 +70,8 @@ func listen() {
 						go rs.WaitForStart()
 					}
 				}
+
+				go comm.Broadcast(peer.IDSlice{wMsg.From}, []byte{}, p2p.TssReadyMsg, wMsg.SessionID)
 			}
 		}
 	}
