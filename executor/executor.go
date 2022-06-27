@@ -38,7 +38,7 @@ func NewExecutor(
 	}
 }
 
-// Execute assembles signature and send transaction on the Ethereum network
+// Execute assembles signature and sends transaction on the Ethereum network
 func (e *Executor) Execute(to common.Address, value *big.Int, data []byte) error {
 	rawTx, err := e.createRawTransaction(to, value, data)
 	if err != nil {

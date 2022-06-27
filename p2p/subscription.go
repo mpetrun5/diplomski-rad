@@ -24,14 +24,12 @@ func (ms *MessageIDSubscriber) GetSubscriber(msgID string) chan *WrappedMessage 
 	return c
 }
 
-// Subscribe a message id
 func (ms *MessageIDSubscriber) Subscribe(msgID string, channel chan *WrappedMessage) {
 	ms.lock.Lock()
 	defer ms.lock.Unlock()
 	ms.subscribers[msgID] = channel
 }
 
-// UnSubscribe a messageid
 func (ms *MessageIDSubscriber) UnSubscribe(msgID string) {
 	ms.lock.Lock()
 	defer ms.lock.Unlock()

@@ -10,7 +10,8 @@ import (
 	"github.com/libp2p/go-libp2p-core/host"
 )
 
-// SetupCommunication is a helper method to configure host, communication and discovery.
+// SetupCommunication is a helper method to configure a host, communication and discovery
+// of peers.
 func SetupCommunication(conf *config.Config) (host.Host, Communication, error) {
 	privKey, err := util.LoadPrivateKey(conf.Key)
 	if err != nil {

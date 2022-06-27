@@ -41,7 +41,7 @@ func NewKeygen(host host.Host, comm p2p.Communication, storer SaveDataStorer, th
 	}
 }
 
-// Start stars a key generation TSS process.
+// Start starts a key generation TSS process.
 func (k *Keygen) Start() error {
 	parties := common.GetParties(k.Host.Peerstore().Peers())
 	k.PopulatePartyStore(parties)

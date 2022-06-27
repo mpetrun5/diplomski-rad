@@ -13,7 +13,8 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
-// NewHost initiates libp2p host on given port and configures stream Noise protocol.
+// NewHost initiates libp2p host on a given port and configures Noise for the p2p
+// communication.
 func NewHost(privKey crypto.PrivKey, rconf *config.Config) (host.Host, error) {
 	logger := log.With().Logger()
 	opts := []libp2p.Option{

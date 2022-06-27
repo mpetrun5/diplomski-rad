@@ -47,7 +47,8 @@ func NewCommunication(h host.Host, protocolID protocol.ID) (Communication, error
 	return &c, nil
 }
 
-// Broadcast writes a message to an outgoing stream for each peer requested.
+// Broadcast writes a message to an outgoing stream for each peer that the message should be
+// sent to.
 func (c *communication) Broadcast(peers peer.IDSlice, msg []byte, msgType MessageType, sessionID string) {
 	hostID := c.h.ID().Pretty()
 
@@ -86,7 +87,7 @@ func (c *communication) Broadcast(peers peer.IDSlice, msg []byte, msgType Messag
 	}
 }
 
-// Subscribe stars listening on given topic and session ID and sends messages to provided channel.
+// Subscribe starts listening on a given topic and session ID and sends messages to the provided channel.
 func (c *communication) Subscribe(topic MessageType, sessionID string, channel chan *WrappedMessage) {
 	c.subscriberLocker.Lock()
 	defer c.subscriberLocker.Unlock()
