@@ -1,8 +1,9 @@
 package common
 
 import (
-	p2p "diplomski/p2p"
 	"fmt"
+
+	p2p "github.com/mpetrun5/diplomski/p2p"
 
 	"github.com/binance-chain/tss-lib/tss"
 	"github.com/libp2p/go-libp2p-core/peer"

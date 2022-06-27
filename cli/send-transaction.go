@@ -1,13 +1,14 @@
 package cli
 
 import (
-	"diplomski/config"
-	"diplomski/executor"
-	"diplomski/p2p"
-	"diplomski/storage"
-	"diplomski/transactor"
-	"diplomski/tss/signing"
 	"math/big"
+
+	"github.com/mpetrun5/diplomski/config"
+	"github.com/mpetrun5/diplomski/executor"
+	"github.com/mpetrun5/diplomski/p2p"
+	"github.com/mpetrun5/diplomski/storage"
+	"github.com/mpetrun5/diplomski/transactor"
+	"github.com/mpetrun5/diplomski/tss/signing"
 
 	tssSigning "github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/ethereum/go-ethereum/common"

@@ -1,13 +1,13 @@
 package cli
 
 import (
-	"diplomski/config"
-	"diplomski/p2p"
-	"diplomski/storage"
-	"diplomski/tss/common"
-	"diplomski/tss/keygen"
-	"diplomski/tss/resharing"
-	"diplomski/tss/signing"
+	"github.com/mpetrun5/diplomski/config"
+	"github.com/mpetrun5/diplomski/p2p"
+	"github.com/mpetrun5/diplomski/storage"
+	"github.com/mpetrun5/diplomski/tss/common"
+	"github.com/mpetrun5/diplomski/tss/keygen"
+	"github.com/mpetrun5/diplomski/tss/resharing"
+	"github.com/mpetrun5/diplomski/tss/signing"
 
 	tssSigning "github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/spf13/cobra"

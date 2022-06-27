@@ -1,9 +1,10 @@
 package p2p
 
 import (
-	config "diplomski/config"
-	util "diplomski/util"
 	"fmt"
+
+	config "github.com/mpetrun5/diplomski/config"
+	util "github.com/mpetrun5/diplomski/util"
 
 	libp2p "github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p-core/crypto"

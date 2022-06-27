@@ -1,7 +1,7 @@
 package main
 
 import (
-	"diplomski/cli"
+	"github.com/mpetrun5/diplomski/cli"
 )
 
 func main() {

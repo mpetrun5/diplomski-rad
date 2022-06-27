@@ -1,12 +1,13 @@
 package resharing
 
 import (
-	p2p "diplomski/p2p"
-	storage "diplomski/storage"
-	"diplomski/tss/common"
-	"diplomski/util"
 	"fmt"
 	"time"
+
+	p2p "github.com/mpetrun5/diplomski/p2p"
+	storage "github.com/mpetrun5/diplomski/storage"
+	"github.com/mpetrun5/diplomski/tss/common"
+	"github.com/mpetrun5/diplomski/util"
 
 	"github.com/binance-chain/tss-lib/ecdsa/keygen"
 	"github.com/binance-chain/tss-lib/ecdsa/resharing"

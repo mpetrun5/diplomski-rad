@@ -2,9 +2,10 @@ package p2p
 
 import (
 	"context"
-	config "diplomski/config"
-	"diplomski/p2p/discovery"
-	"diplomski/util"
+
+	config "github.com/mpetrun5/diplomski/config"
+	"github.com/mpetrun5/diplomski/p2p/discovery"
+	"github.com/mpetrun5/diplomski/util"
 
 	"github.com/libp2p/go-libp2p-core/host"
 )

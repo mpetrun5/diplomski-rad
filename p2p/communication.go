@@ -2,10 +2,11 @@ package p2p
 
 import (
 	"context"
-	"diplomski/util"
 	"encoding/json"
 	"fmt"
 	"sync"
+
+	"github.com/mpetrun5/diplomski/util"
 
 	"github.com/libp2p/go-libp2p-core/host"
 	"github.com/libp2p/go-libp2p-core/network"

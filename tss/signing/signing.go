@@ -1,12 +1,13 @@
 package signing
 
 import (
-	p2p "diplomski/p2p"
-	"diplomski/storage"
-	"diplomski/tss/common"
 	"fmt"
 	"math/big"
 	"time"
+
+	p2p "github.com/mpetrun5/diplomski/p2p"
+	"github.com/mpetrun5/diplomski/storage"
+	"github.com/mpetrun5/diplomski/tss/common"
 
 	"github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/binance-chain/tss-lib/tss"

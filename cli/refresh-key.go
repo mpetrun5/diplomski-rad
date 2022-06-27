@@ -1,10 +1,10 @@
 package cli
 
 import (
-	"diplomski/config"
-	"diplomski/p2p"
-	"diplomski/storage"
-	"diplomski/tss/resharing"
+	"github.com/mpetrun5/diplomski/config"
+	"github.com/mpetrun5/diplomski/p2p"
+	"github.com/mpetrun5/diplomski/storage"
+	"github.com/mpetrun5/diplomski/tss/resharing"
 
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"

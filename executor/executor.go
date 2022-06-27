@@ -1,8 +1,9 @@
 package executor
 
 import (
-	"diplomski/tss/signing"
 	"math/big"
+
+	"github.com/mpetrun5/diplomski/tss/signing"
 
 	tssSigning "github.com/binance-chain/tss-lib/ecdsa/signing"
 	"github.com/ethereum/go-ethereum/common"
